@@ -9,23 +9,18 @@ function App() {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
+    const locationFinder = () => {
+      window.navigator.geolocation.getCurrentPosition(
+        position => {
+          setUserLocation({ lat: position.coords.latitude, long: position.coords.longitude })
+        },
+        err => setErrorMessage(err.message),
+
+      )
+    };
+
     locationFinder();
   }, [])
-
-  let latitude;
-  let longitude;
-
-  const locationFinder = () => {
-    window.navigator.geolocation.getCurrentPosition(
-      position => {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-        setUserLocation({ lat: latitude, long: longitude })
-      },
-      err => setErrorMessage(err.message),
-
-    )
-  };
 
   const LocationErrorDisplay = () => {
     if (errorMessage) {

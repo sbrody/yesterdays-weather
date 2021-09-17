@@ -12,28 +12,25 @@ const WeatherDisplay = ({ location }) => {
         console.log(location)
 
         if (location !== null) {
-            console.log('have location')
+            const returnApiDataToday = async () => {
+                await apiCallToday(location).then((res) => setApiDataToday(res));
+            };
+
             returnApiDataToday();
+
+            const returnApiDataYesterday = async () => {
+                await apiCallYesterday(location).then((res) => setApiDataYesterday(res));
+            }
+
             returnApiDataYesterday();
+
+            const returnApiDataLocation = async () => {
+                await apiCallLocale(location).then((res) => setApiDataLocation(res));
+            }
+
             returnApiDataLocation();
         }
     }, [location]);
-
-    const returnApiDataToday = async () => {
-        await apiCallToday(location).then((res) => setApiDataToday(res));
-    };
-
-    const returnApiDataYesterday = async () => {
-        await apiCallYesterday(location).then((res) => setApiDataYesterday(res));
-    }
-
-    const returnApiDataLocation = async () => {
-        await apiCallLocale(location).then((res) => setApiDataLocation(res));
-    }
-
-    console.log(apiDataLocation);
-    console.log(apiDataYesterday);
-    console.log(apiDataToday);
 
     const locality = () => {
         if (apiDataLocation !== null) {
