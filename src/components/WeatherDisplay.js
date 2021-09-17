@@ -49,9 +49,9 @@ const WeatherDisplay = ({ location }) => {
                 <div className="card">
                     <h3>Yesterday</h3>
                     <img src={`https://openweathermap.org/img/wn/${apiDataYesterday.current.weather[0].icon}@2x.png`} alt="" />
-                    <h4>Temperature 24 hours ago: {apiDataYesterday.current.temp} Celsius</h4>
-                    <h4>Felt like: {apiDataYesterday.current.feels_like} Celsius</h4>
-                    <h4>Weather conditions: {apiDataYesterday.current.weather[0].description}</h4>
+                    <p>Temperature 24 hours ago: {apiDataYesterday.current.temp} Celsius</p>
+                    <p>Felt like: {apiDataYesterday.current.feels_like} Celsius</p>
+                    <p>Weather conditions: {apiDataYesterday.current.weather[0].description}</p>
                 </div>
             )
         }
