@@ -32,8 +32,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Yesterday's weather</h1>
-
+        <h1>Do I need a jumper?</h1>
+        <h2>Compare today's weather with yesterday</h2>
       </header>
       <main>
         <WeatherDisplay location={userLocation} />
