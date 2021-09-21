@@ -45,12 +45,16 @@ const WeatherDisplay = ({ location }) => {
 
     const yesterdaysWeatherDisplay = () => {
         if (apiDataYesterday !== null) {
+            console.log(apiDataYesterday);
             return (
                 <div className="card">
                     <h3>Yesterday</h3>
                     <img src={`https://openweathermap.org/img/wn/${apiDataYesterday.current.weather[0].icon}@2x.png`} alt="" />
                     <p>Temperature 24 hours ago: {apiDataYesterday.current.temp} Celsius</p>
                     <p>Felt like: {apiDataYesterday.current.feels_like} Celsius</p>
+                    <p>Temperature at 9am: {apiDataYesterday.hourly[9].temp} Celsius</p>
+                    <p>Temperature at noon: {apiDataYesterday.hourly[12].temp} Celsius</p>
+                    <p>Temperature at 5pm: {apiDataYesterday.hourly[17].temp} Celsius</p>
                     <p>Weather conditions: {apiDataYesterday.current.weather[0].description}</p>
                 </div>
             )
@@ -60,12 +64,14 @@ const WeatherDisplay = ({ location }) => {
 
     const todaysWeatherDisplay = () => {
         if (apiDataToday !== null) {
+            // console.log(apiDataToday);
             return (
                 <div className="card">
                     <h3>Today</h3>
                     <img src={`https://openweathermap.org/img/wn/${apiDataToday.current.weather[0].icon}@2x.png`} alt="" />
                     <p>Temperature now: {apiDataToday.current.temp} Celsius</p>
                     <p>Feels like: {apiDataToday.current.feels_like} Celsius</p>
+                    <p>Forecast daytime temperature: {apiDataToday.daily[0].temp.day}</p>
                     <p>Weather conditions: {apiDataToday.current.weather[0].description}</p>
                 </div>
             )

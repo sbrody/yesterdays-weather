@@ -9,7 +9,7 @@ console.log(process.env.REACT_APP_API_KEY);
 export const apiCallToday = (location) => {
     console.log(location.lat);
     const weatherData = async () => {
-        const apiResponse = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.long}&exclude=hourly,daily,minutely,alerts&units=metric&appid=${apiKey}`)
+        const apiResponse = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.long}&exclude=hourly,minutely,alerts&units=metric&appid=${apiKey}`)
             .then((res) => res.json())
             .catch(() => null);
         return apiResponse;
