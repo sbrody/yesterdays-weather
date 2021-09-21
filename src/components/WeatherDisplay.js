@@ -52,9 +52,9 @@ const WeatherDisplay = ({ location }) => {
                     <img src={`https://openweathermap.org/img/wn/${apiDataYesterday.current.weather[0].icon}@2x.png`} alt="" />
                     <p>Temperature 24 hours ago: {apiDataYesterday.current.temp} Celsius</p>
                     <p>Felt like: {apiDataYesterday.current.feels_like} Celsius</p>
-                    <p>Temperature at 9am: {apiDataYesterday.hourly[9].temp} Celsius</p>
-                    <p>Temperature at noon: {apiDataYesterday.hourly[12].temp} Celsius</p>
-                    <p>Temperature at 5pm: {apiDataYesterday.hourly[17].temp} Celsius</p>
+                    <p>Temperature at 9am UTC yesterday: {apiDataYesterday.hourly[9].temp} Celsius</p>
+                    <p>Temperature at noon UTC yesterday: {apiDataYesterday.hourly[12].temp} Celsius</p>
+                    <p>Temperature at 5pm UTC yesterday: {apiDataYesterday.hourly[17].temp} Celsius</p>
                     <p>Weather conditions: {apiDataYesterday.current.weather[0].description}</p>
                 </div>
             )
