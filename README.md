@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Do I Need a Jumper - a web app that compares yesterday's weather with today's.
+
+Url: https://doineedajumper.com
+
+Currently a work in progress, this app needs to resolve an issue with geolocation permission on ios.
+
+Also welcome to suggestions on how to move it forward.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
