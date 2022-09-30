@@ -6,6 +6,7 @@ Currently a work in progress, this app needs to resolve an issue with geolocatio
 
 Also welcome to suggestions on how to move it forward.
 
+Running this project locally does not work at the moment as environment variables are not committed but defined in Netlify. Working out the best way to manage this.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
